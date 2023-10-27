@@ -1,0 +1,170 @@
+:root {
+  /*    Primary colors*/
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /*    Neutral colors*/
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/*Resets*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Base selectors*/
+body {
+  background-image: url("images/pattern-background-mobile.svg");
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: 40rem;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+header img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  color: var(--dark-blue);
+  font-size: 24px;
+  font-family: Red Hat Display", sans-serif;;
+}
+
+p {
+  color: var(--desaturated-blue);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  opacity: 0, 1;
+}
+
+article {
+  padding-inline: 2rem;
+}
+
+article p {
+  text-align: center;
+}
+
+article p:nth-child(4) {
+  margin-bottom: 1.8rem;
+}
+
+.button a {
+  color: var(--pale-blue);
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--bright-blue);
+  color: var(--pale-blue);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 900;
+  width: 100%;
+  padding: 1rem;
+}
+
+.order a{
+  background-color: transparent;
+  /* opacity: 1; */
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  /* padding-top: 2rem; */
+}
+
+.button {
+  box-shadow: -0 30px 10px var(--very-pale-blue);
+}
+
+.container {
+  background-color: white;
+  box-shadow: 0 0 10px var(--desaturated-blue);
+  border-radius: 20px;
+  width: 375px;
+  margin-inline: auto;
+  margin-block: 3rem;
+  padding-bottom: 2rem;
+}
+
+.payment {
+  background-color: var(--very-pale-blue);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.plan p:first-child{
+  color: var(--dark-blue);
+  font-weight: 800;
+  font-size:25px px;
+}
+
+.payment a {
+  margin-left: auto;
+  font-weight: 800;
+  color: var(--bright-blue);
+  font-size: 12px;
+}
+
+/* .payment a:hover, */
+ .payment a:active {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--bright-blue);
+}
+.order a:active{
+  color: var(--dark-blue);
+  }
+  .button a:active{
+    opacity: 1.4;
+  }
+.order{
+    margin-top: 1rem;
+}
+
+  /* mobile design */
+
+  @media(max-width: 700px){
+.container{
+ width: 340px;
+ height: 35rem;
+  margin-inline: auto;
+  margin-block: 3rem;
+  padding-bottom: 2rem; 
+}
+
+.main {
+  padding:0 1rem 0 1rem;
+  line-height: 1.7;
+    margin-top: 3rem;
+    
+    
+
+}
+
+.order{
+  margin-top: 1rem;
+}
+
+}
+
+  
