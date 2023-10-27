@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Elrey009/Product--preview--card--component)
-- Live Site URL: [Add live site URL here](https://product-preview-card-component-teal-delta.vercel.app/)
+- Solution URL: [Add solution URL here](https://github.com/Elrey009/Order-summary)
+- Live Site URL: [Add live site URL here](https://order-summary-zeta-jet.vercel.app/)
 
 ### Built with
 
@@ -55,7 +55,7 @@ To see how you can add code snippets, see below:
 ## Author
 
 - Website - [Daniel Ejike](https://www.your-site.com)
-- Frontend Mentor - [@Elrey009](https://www.frontendmentor.io/solutions/responsive-product-preview-card-UKzo-kdMl5)
+- Frontend Mentor - [@Elrey009](https://www.frontendmentor.io/solutions/a-responsive-order-page-IqnIJp6HSl)
 - Twitter - [@da_ni_lo009](https://twitter.com/da_ni_lo009)
 
 ## Acknowledgments
