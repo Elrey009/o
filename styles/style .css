@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
   /*    Primary colors*/
   --pale-blue: hsl(225, 100%, 94%);
@@ -7,6 +8,9 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+
+  /* Box Shadow */
+  --shadow-blue: hsla(245, 75%, 52%, 0.323);
 }
 
 /*Resets*/
@@ -20,151 +24,152 @@
 
 /*Base selectors*/
 body {
-  background-image: url("images/pattern-background-mobile.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../images/pattern-background-desktop.svg');
   background-color: var(--pale-blue);
   background-repeat: no-repeat;
-  background-size: 40rem;
-  font-family: "Red Hat Display", sans-serif;
-}
+  background-size: 100%;
+  background-position-y: -40px;
 
-header img {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-weight: bolder;
-  color: var(--dark-blue);
-  font-size: 24px;
-  font-family: Red Hat Display", sans-serif;;
-}
-
-p {
-  color: var(--desaturated-blue);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  opacity: 0, 1;
-}
-
-article {
-  padding-inline: 2rem;
-}
-
-article p {
-  text-align: center;
-}
-
-article p:nth-child(4) {
-  margin-bottom: 1.8rem;
-}
-
-.button a {
-  color: var(--pale-blue);
-  text-decoration: none;
-}
-
-button {
-  background-color: var(--bright-blue);
-  color: var(--pale-blue);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 900;
-  width: 100%;
-  padding: 1rem;
-}
-
-.order a{
-  background-color: transparent;
-  /* opacity: 1; */
-  color: var(--desaturated-blue);
-  font-weight: 700;
+  font-family: 'Red Hat Display', sans-serif;
   font-size: 1rem;
-  text-decoration: none;
-  /* padding-top: 2rem; */
+  color: var(--desaturated-blue);
+  line-height: 1.5;
 }
 
-.button {
-  box-shadow: -0 30px 10px var(--very-pale-blue);
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utility Classes */
 .container {
-  background-color: white;
-  box-shadow: 0 0 10px var(--desaturated-blue);
-  border-radius: 20px;
-  width: 375px;
+  width: min(89%, 1110px);
   margin-inline: auto;
-  margin-block: 3rem;
-  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.payment {
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Desktop Styles */
+.card {
+  max-width: 420px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 40px -10px var(--shadow-blue);
+}
+
+.card .card-content {
+  padding-inline: 3rem;
+  padding-block: 2rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.card-content .payment {
   background-color: var(--very-pale-blue);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-block: 1.5rem;
 }
 
-.plan p:first-child{
+.payment-left {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.payment-left .payment-img {
+  padding: 0.2rem;
+  width: 3rem;
+}
+
+.payment-left .plan p:first-child {
   color: var(--dark-blue);
   font-weight: 800;
-  font-size:25px px;
+  font-size: 25px px;
 }
 
-.payment a {
+.payment-right {
   margin-left: auto;
   font-weight: 800;
   color: var(--bright-blue);
   font-size: 12px;
+  transition: opacity 0.4s ease-in-out;
 }
 
-/* .payment a:hover, */
- .payment a:active {
-  cursor: pointer;
+.payment-right:hover {
+  opacity: 0.7;
+}
+
+.card-cta a {
+  display: block;
   text-decoration: none;
-  color: var(--bright-blue);
-}
-.order a:active{
-  color: var(--dark-blue);
-  }
-  .button a:active{
-    opacity: 1.4;
-  }
-.order{
-    margin-top: 1rem;
+  padding-block: 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
-  /* mobile design */
-
-  @media(max-width: 700px){
-.container{
- width: 340px;
- height: 35rem;
-  margin-inline: auto;
-  margin-block: 3rem;
-  padding-bottom: 2rem; 
+.btn-proceed {
+  background-color: var(--bright-blue);
+  color: white;
+  border-radius: 0.5rem;
+  opacity: 1;
+  box-shadow: 0 14px 14px -4px var(--shadow-blue);
+  transition: opacity 0.4s ease-in-out;
 }
 
-.main {
-  padding:0 1rem 0 1rem;
-  line-height: 1.7;
-    margin-top: 3rem;
-    
-    
-
+.btn-proceed:hover {
+  opacity: 0.7;
 }
 
-.order{
+.btn-cancel {
+  background-color: transparent;
+  color: inherit;
   margin-top: 1rem;
+  transition: color 0.4s ease-in-out;
 }
 
+.btn-cancel:hover {
+  color: var(--dark-blue);
 }
 
-  
+/* Mobile design */
+@media (max-width: 764px) {
+  body {
+    background-image: url('../images/pattern-background-mobile.svg');
+    background-position: top;
+  }
+
+  .card .card-content {
+    padding-inline: 2rem;
+  }
+}
